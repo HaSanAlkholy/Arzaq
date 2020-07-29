@@ -651,6 +651,10 @@ header .header-nav .navbar .navbar-nav a {
   }
 }
 
+header .header-nav .navbar .navbar-nav a:hover {
+  color: #cc9430;
+}
+
 header .header-nav .categories {
   justify-content: flex-end;
 }

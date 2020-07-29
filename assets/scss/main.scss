@@ -513,6 +513,10 @@ header {
           @media (max-width: 1200px) {
             font-size: 0.8rem;
           }
+
+          &:hover{
+            color:$color2;
+          }
         }
       }
     }
