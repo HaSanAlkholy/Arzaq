@@ -89,7 +89,7 @@ html {
 @media (max-width: 767px) {
   body,
   html {
-    font-size: 9px;
+    font-size: 10px;
     text-align: center;
   }
 }
@@ -1221,6 +1221,139 @@ footer .footer-bottom .payment img {
   .sec-nav #sec-items.show {
     width: 200px !important;
   }
+}
+
+.sec-nav #sec-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(29, 29, 29, 0.9);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.sec-nav #sec-search form {
+  width: 70%;
+  height: 100%;
+  flex-direction: column-reverse;
+}
+
+.sec-nav #sec-search form .form-group {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-direction: column-reverse;
+  height: fit-content;
+}
+
+.sec-nav #sec-search form input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 20px;
+  text-align: right;
+  padding: 0.5rem;
+}
+
+.sec-nav #sec-search form a {
+  color: #0e0d0d;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%);
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+@media (max-width: 500px) {
+  .sec-nav #sec-search form a {
+    left: 10px;
+  }
+}
+
+.sec-nav #sec-search form a:hover {
+  color: #cc9430;
+}
+
+.sec-nav #sec-search form select {
+  width: 100%;
+  height: 3rem;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  border-color: #e0e0e0;
+  text-align: right;
+  outline: none;
+  position: relative;
+  background-image: url(../img/icons/arrow-dark.png);
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  background-position: 1rem center;
+  padding-left: 90%;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 800px) {
+  .sec-nav #sec-search form select {
+    padding-left: 85%;
+  }
+}
+
+@media (max-width: 500px) {
+  .sec-nav #sec-search form select {
+    padding-left: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .sec-nav #sec-search form select {
+    padding-left: 70%;
+  }
+}
+
+@media (max-width: 350px) {
+  .sec-nav #sec-search form select {
+    padding-left: 60%;
+  }
+}
+
+.sec-nav #sec-search form select::after, .sec-nav #sec-search form select::before {
+  display: none;
+}
+
+.sec-nav #sec-search form select .default {
+  color: black !important;
+}
+
+.sec-nav #sec-search form select:focus {
+  background-color: #f5f5f5;
+  border-color: #e0e0e0;
+  outline: none;
+}
+
+.sec-nav #sec-search form select option {
+  background-color: #f5f5f5;
+  border-color: #e0e0e0;
+  text-align: right;
+}
+
+.sec-nav #sec-search form .close-search {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  background-color: #ffffff42;
+  margin-bottom: 5rem;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.sec-nav .active {
+  z-index: 15 !important;
+  opacity: 1 !important;
 }
 
 #left header .lang .prefix form,
