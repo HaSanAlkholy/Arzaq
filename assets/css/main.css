@@ -141,6 +141,7 @@ html {
 
 .s-container .swiper-slide .product-img img {
   transition: all 0.5s;
+  max-height: 100%;
 }
 
 .s-container .swiper-slide .product-img:hover img {
@@ -198,6 +199,18 @@ html {
 
 .s-container .swiper-slide .buy .btn-outline-dark {
   border-color: rgba(128, 128, 128, 0.5);
+}
+
+.s-container .swiper-slide .btn:nth-child(1) {
+  margin-right: 5px;
+}
+
+.s-head {
+  margin-bottom: 2rem;
+}
+
+.s-head h4 {
+  font-size: 25px;
 }
 
 .banner {
