@@ -16,7 +16,7 @@ html {
     font-size: 10px;
   }
   @media (max-width: 767px) {
-    font-size: 10px;
+    font-size: 11px;
     text-align: center;
   }
 }
@@ -104,13 +104,13 @@ html {
         margin-top: 1rem;
         color: #6d8ba7;
         font-weight: 700;
-        font-size: 1.3rem;
+        font-size: 19px;
 
         .price-sale {
           text-decoration: line-through;
           color: gray;
           margin-right: 1rem;
-          font-size: 1rem;
+          font-size: 16px;
           font-weight: 500;
         }
       }
@@ -296,10 +296,10 @@ header {
         font-size: 18px;
         transition: all 0.5s;
 
-        @media (max-width: 300px) {
-          height: 30px;
-          width: 30px;
-          font-size: 11px;
+        @media (max-width: 400px) {
+          height: 35px;
+          width: 35px;
+          font-size: 14px;
         }
 
         &:hover {
@@ -322,10 +322,10 @@ header {
           font-size: 16px;
           transition: all 0.5s;
 
-          @media (max-width: 300px) {
-            height: 17px;
-            width: 17px;
-            font-size: 9px;
+          @media (max-width: 400px) {
+            height: 18px;
+            width: 18px;
+            font-size: 12px;
           }
         }
       }
@@ -466,11 +466,13 @@ header {
     }
 
     .logo {
+      justify-content: flex-end;
+
       @media (max-width: 992px) {
         margin: 0 !important;
         margin-left: auto !important;
       }
-      @media (max-width: 300px) {
+      @media (max-width: 400px) {
         img {
           max-width: 75%;
         }
@@ -489,6 +491,7 @@ header {
 
     .call {
       font-weight: 600;
+      justify-content: flex-start;
 
       p {
         color: #1d1d1d;
@@ -514,8 +517,8 @@ header {
             font-size: 0.8rem;
           }
 
-          &:hover{
-            color:$color2;
+          &:hover {
+            color: $color2;
           }
         }
       }
@@ -706,6 +709,7 @@ main {
         h2 {
           color: $color1;
           margin-bottom: 2rem;
+          text-align: center;
         }
         img {
           width: 40%;
@@ -925,11 +929,13 @@ footer {
         }
       }
 
+      .down {
+        display: none;
+      }
+
       li {
         margin-bottom: 0.5rem;
-        @media (max-width: 1200px) {
-          margin-bottom: 0.3rem;
-        }
+        transition: all 0.5s;
         a {
           font-size: 1.1rem;
           color: #e0dfdf;
@@ -942,6 +948,61 @@ footer {
           }
         }
       }
+
+      .dropdown2 {
+        @media (max-width: 576px) {
+          position: relative;
+          cursor: pointer;
+          display: inline-block;
+
+          .down {
+            display: inline-block;
+          }
+
+          a {
+            color: black;
+
+            &:hover {
+              color: $color2;
+            }
+          }
+
+          .dropdown-content {
+            position: relative;
+            background-color: transparent;
+            min-width: auto;
+            left: 0;
+            box-shadow: none;
+            padding: 0;
+            z-index: -1;
+            opacity: 0;
+            height: 0;
+            transition: all 0.1s;
+
+            li {
+              margin-bottom: 0;
+            }
+
+            a {
+              color: white;
+            }
+          }
+        }
+      }
+
+      .dropdown2:hover {
+        @media (max-width: 576px) {
+          .dropdown-content {
+            z-index: 15;
+            opacity: 1;
+            height: auto;
+
+            li {
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
     }
 
     .logo {
@@ -951,6 +1012,9 @@ footer {
       }
       img {
         margin-bottom: 1.5rem;
+        @media (max-width: 576px) {
+          max-width: 50%;
+        }
       }
 
       p {
@@ -1060,10 +1124,6 @@ footer {
     width: 250px !important;
     height: 100vh !important;
     opacity: 1 !important;
-
-    @media (max-width: 400px) {
-      width: 200px !important;
-    }
   }
 
   #sec-search {

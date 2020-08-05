@@ -62,6 +62,12 @@ h3 {
   }
 }
 
+@media (max-width: 400px) {
+  .row {
+    margin: 0;
+  }
+}
+
 body,
 html {
   overflow-x: hidden;
@@ -89,7 +95,7 @@ html {
 @media (max-width: 767px) {
   body,
   html {
-    font-size: 10px;
+    font-size: 11px;
     text-align: center;
   }
 }
@@ -182,14 +188,14 @@ html {
   margin-top: 1rem;
   color: #6d8ba7;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 19px;
 }
 
 .s-container .swiper-slide .product-disc .price .price-sale {
   text-decoration: line-through;
   color: gray;
   margin-right: 1rem;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -401,11 +407,11 @@ header .header-logo .sign .cart {
   transition: all 0.5s;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
   header .header-logo .sign .cart {
-    height: 30px;
-    width: 30px;
-    font-size: 11px;
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
   }
 }
 
@@ -431,11 +437,11 @@ header .header-logo .sign .cart .num {
   transition: all 0.5s;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
   header .header-logo .sign .cart .num {
-    height: 17px;
-    width: 17px;
-    font-size: 9px;
+    height: 18px;
+    width: 18px;
+    font-size: 12px;
   }
 }
 
@@ -593,6 +599,10 @@ header .header-logo .search form select option {
   text-align: right;
 }
 
+header .header-logo .logo {
+  justify-content: flex-end;
+}
+
 @media (max-width: 992px) {
   header .header-logo .logo {
     margin: 0 !important;
@@ -600,7 +610,7 @@ header .header-logo .search form select option {
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
   header .header-logo .logo img {
     max-width: 75%;
   }
@@ -620,6 +630,7 @@ header .header-nav {
 
 header .header-nav .call {
   font-weight: 600;
+  justify-content: flex-start;
 }
 
 header .header-nav .call p {
@@ -858,6 +869,7 @@ main #special-offers .special-offers-banner .banner-head {
 main #special-offers .special-offers-banner .banner-head h2 {
   color: #054f80;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 main #special-offers .special-offers-banner .banner-head img {
@@ -1082,14 +1094,13 @@ footer .footer-top .links .head h4 {
   }
 }
 
-footer .footer-top .links li {
-  margin-bottom: 0.5rem;
+footer .footer-top .links .down {
+  display: none;
 }
 
-@media (max-width: 1200px) {
-  footer .footer-top .links li {
-    margin-bottom: 0.3rem;
-  }
+footer .footer-top .links li {
+  margin-bottom: 0.5rem;
+  transition: all 0.5s;
 }
 
 footer .footer-top .links li a {
@@ -1108,6 +1119,52 @@ footer .footer-top .links li a:hover {
   color: #ba8c3e;
 }
 
+@media (max-width: 576px) {
+  footer .footer-top .links .dropdown2 {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+  }
+  footer .footer-top .links .dropdown2 .down {
+    display: inline-block;
+  }
+  footer .footer-top .links .dropdown2 a {
+    color: black;
+  }
+  footer .footer-top .links .dropdown2 a:hover {
+    color: #cc9430;
+  }
+  footer .footer-top .links .dropdown2 .dropdown-content {
+    position: relative;
+    background-color: transparent;
+    min-width: auto;
+    left: 0;
+    box-shadow: none;
+    padding: 0;
+    z-index: -1;
+    opacity: 0;
+    height: 0;
+    transition: all 0.1s;
+  }
+  footer .footer-top .links .dropdown2 .dropdown-content li {
+    margin-bottom: 0;
+  }
+  footer .footer-top .links .dropdown2 .dropdown-content a {
+    color: white;
+  }
+}
+
+@media (max-width: 576px) {
+  footer .footer-top .links .dropdown2:hover .dropdown-content {
+    z-index: 15;
+    opacity: 1;
+    height: auto;
+  }
+  footer .footer-top .links .dropdown2:hover .dropdown-content li {
+    margin-bottom: 0.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   footer .footer-top .logo {
     margin-top: 4rem;
@@ -1117,6 +1174,12 @@ footer .footer-top .links li a:hover {
 
 footer .footer-top .logo img {
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  footer .footer-top .logo img {
+    max-width: 50%;
+  }
 }
 
 footer .footer-top .logo p {
@@ -1232,12 +1295,6 @@ footer .footer-bottom .payment img {
   width: 250px !important;
   height: 100vh !important;
   opacity: 1 !important;
-}
-
-@media (max-width: 400px) {
-  .sec-nav #sec-items.show {
-    width: 200px !important;
-  }
 }
 
 .sec-nav #sec-search {

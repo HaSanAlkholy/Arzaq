@@ -39,7 +39,7 @@ var mySwiper = new Swiper('.swiper-container', {
       prevEl: '.swiper-button-prev',
     },
   });
-//most viewed slider
+//products slider
 var mySwiper = new Swiper('.s-container', {
     // Optional parameters
     direction: 'horizontal',
@@ -81,6 +81,6 @@ var mySwiper = new Swiper('.s-container', {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-  });
+});
 
 
