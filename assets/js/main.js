@@ -1,11 +1,29 @@
 // second navbar
 
 $('#sec-icon').click(function (e) { 
+  $('#sec-nav').toggleClass('sec-nav-active');
   $('#sec-items').toggleClass('show');
+});
+$('#sec-search-icon').click(function (e) { 
+  $('#sec-nav').toggleClass('sec-nav-active');
+  $('#sec-search').toggleClass('search-active');
 });
 
 $('#close-btn').click(function (e) { 
-  $('#sec-items').removeClass('show');
+  $('#sec-items').toggleClass('show');
+  $('#sec-nav').toggleClass('sec-nav-active');
+});
+function closeSearch() { 
+  $('#sec-search').toggleClass('search-active');
+  $('#sec-nav').toggleClass('sec-nav-active');
+};
+
+$('#sec-nav').click(function (e) { 
+  if (e.target.id == "sec-nav" || e.target.id == "sec-search" ) {
+    $('#sec-search').removeClass('search-active');
+    $('#sec-items').removeClass('show');
+    $('#sec-nav').removeClass('sec-nav-active');
+  }
 });
 
 
