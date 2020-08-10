@@ -78,6 +78,14 @@ html {
   background-color: white;
 }
 
+@media (max-width: 1500px) {
+  body,
+  html {
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
 @media (max-width: 767px) {
   body,
   html {
@@ -568,7 +576,7 @@ header .header-logo .search form select {
   background-repeat: no-repeat;
   -webkit-appearance: none;
   background-position: 1rem center;
-  padding-left: 8rem;
+  padding-left: 7rem;
 }
 
 @media (max-width: 1200px) {
